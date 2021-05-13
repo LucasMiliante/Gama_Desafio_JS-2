@@ -911,7 +911,7 @@ var Produtos = [{
     }
 ]
 
-//#regiom - Formulas que serão usadas durante a rotina
+//#region - Formulas que serão usadas durante a rotina
 function unico(valor, indice, proprio) {
     return proprio.indexOf(valor) === indice;
 }
