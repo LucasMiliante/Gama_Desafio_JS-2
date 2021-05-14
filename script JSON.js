@@ -941,10 +941,9 @@ var i = 0;
 var totalEmDestaque = 0;
 for (i; i < Produtos.length; i++) {
     if (Produtos[i].emDestaque == "sim") {
-        totalEmDestaque += Produtos[i].qtdEstoque;
+        totalEmDestaque += 1;
     }
-}
-console.log(`2. O total de itens em destaque em estoque é de ${totalEmDestaque}`);
+}console.log(`2. O total de itens em destaque é de ${totalEmDestaque}`);
 //#endregion
 
 //#region - 3 - Quantidade total de itens disponíveis (similar ao anterior)
@@ -1027,7 +1026,7 @@ for (i; i < unicoIds.length; i++) {
     var valorTotalItensDepartamento = 0;
     for (j; j < Produtos.length; j++) {
         if (Produtos[j].idDepto == unicoIds[i]) {
-            valorTotalItensDepartamento += Produtos[j].preco;
+            valorTotalItensDepartamento += Produtos[j].preco * Produtos[j].qtdEstoque;
         }
     }
     Valores.push(valorTotalItensDepartamento);
